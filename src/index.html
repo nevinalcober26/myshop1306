@@ -1,14 +1,31 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Angushop</title>
-  <base href="/">
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+        <meta charset="utf-8">
+        <title>Angular Shop Practice</title>
+        <base href="/">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="/assets/loader.css" />
+        <link rel="stylesheet" id="select-color" type="text/css" href="/assets/theme/css/red.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <body>
+        <!-- App Component -->
+        <app-root></app-root>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+        <!-- First Loading -->
+        <div class="loader" id="loader">
+            <img src="/assets/images/brand/logo-stripe.jpg" alt="" />
+        </div>
+
+        <!-- Javascript External -->
+        <script src="https://checkout.stripe.com/checkout.js"></script>
+        <script type="text/javascript">
+			if (global === undefined) {
+				var global = window;
+			}
+		</script>
+    </body>
 </html>

@@ -1,0 +1,29 @@
+<!-- Head Section -->
+<div class="head-section bg">
+    <div class="container">
+        <h4>Product <span class="font-light">Listing</span></h4>
+    </div>
+</div>
+<div class="container-page">
+    <div class="box-page">
+
+        <!-- Start Product -->
+        <div class="wrap-product">
+            <app-product
+                [filter]="{
+                    productName: search,
+                    category: category,
+                    color: color,
+                    price: price,
+                    size: sizes
+                }"
+                [column]="'l3 s6'"
+                [setlimit]="99"
+                [paginate]="false"
+                [currentPage]="currentPage"
+                (pageChange)="onPageChange($event)">
+            </app-product>
+        </div>
+        <!-- End Product -->
+    </div>
+</div>
